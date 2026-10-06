@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 · sperattidev</title>
+  <meta name="robots" content="noindex" />
+  <style>
+    :root { --bg: #0b0f14; --text: #d6deeb; --muted: #8191a6; --accent: #3ddc97; --err: #ff6b81; --fn: #82aaff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 16px; background: var(--bg); color: var(--text); font: 14px/1.7 "JetBrains Mono", ui-monospace, Consolas, monospace; }
+    .box { width: min(640px, 100%); border: 1px solid #1e2732; border-radius: 10px; background: #11171f; overflow: hidden; }
+    .bar { padding: 9px 14px; background: #161e28; color: var(--muted); font-size: 12px; border-bottom: 1px solid #1e2732; }
+    pre { margin: 0; padding: 22px; white-space: pre-wrap; word-break: break-word; }
+    .ok { color: var(--accent); } .err { color: var(--err); } .fn { color: var(--fn); } .muted { color: var(--muted); }
+    a { color: var(--accent); }
+    .big { font-size: clamp(48px, 12vw, 96px); font-weight: 800; color: var(--accent); line-height: 1; display: block; margin-bottom: 12px; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="bar">bash — visitante@sperattidev: ~</div>
+<pre><span class="big">404</span><span class="ok">visitante@sperattidev</span>:<span class="fn">~</span>$ cd <span id="path"></span>
+<span class="err">bash: cd: No existe el archivo o directorio</span>
+
+<span class="muted"># La ruta que buscás no existe (todavía).</span>
+<span class="ok">visitante@sperattidev</span>:<span class="fn">~</span>$ <a id="home" href="/">cd ~/portfolio</a></pre>
+  </div>
+  <script>
+    document.getElementById("path").textContent = location.pathname;
+    if (/^\/portafolio(\/|$)/i.test(location.pathname)) document.getElementById("home").href = "/Portafolio/";
+  </script>
+</body>
+</html>
